@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - AI Browser Assistant</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --tag-bg: #eff6ff;
+      --tag-text: #1d4ed8;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --card-bg: #1e293b;
+        --text: #f1f5f9;
+        --text-muted: #94a3b8;
+        --border: #334155;
+        --primary: #3b82f6;
+        --primary-hover: #60a5fa;
+        --tag-bg: #1e3a8a;
+        --tag-text: #93c5fd;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background-color: var(--card-bg);
+      padding: 48px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+
+    .header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background-color: var(--tag-bg);
+      color: var(--tag-text);
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .meta {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      color: var(--text);
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    ul {
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .callout {
+      background-color: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.95rem;
+    }
+
+    .callout strong {
+      color: var(--primary);
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .lang-switch {
+      float: right;
+      font-size: 0.85rem;
+    }
+
+    .lang-switch a {
+      color: var(--primary);
+      text-decoration: none;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="badge">Official Declaration</span>
+      <div class="lang-switch">
+        <a href="#en">English</a> | <a href="#zh">中文</a>
+      </div>
+      <h1>Privacy Policy for AI Browser Assistant</h1>
+      <div class="meta">
+        <span>Effective Date: October 2026</span> • <span>Product: AI Browser Assistant (Extension)</span>
+      </div>
+    </div>
+
+    <!-- ENGLISH SECTION (PRIMARY FOR CHROME REVIEWERS) -->
+    <section id="en">
+      <h2>1. Introduction</h2>
+      <p>
+        <strong>AI Browser Assistant</strong> ("we", "our", or "the extension") is dedicated to protecting user privacy. This Privacy Policy clarifies how our browser extension collects, uses, stores, and protects your information.
+      </p>
+
+      <h2>2. Core Principle: Local-First & Zero Tracking</h2>
+      <div class="callout">
+        <strong>Privacy By Design:</strong> We do NOT own or operate any central servers to collect, harvest, track, or monitor your personal data, web browsing history, or AI chat content.
+      </div>
+      <p>
+        The extension is built with a local-first architecture. All your configuration settings, sensitive credentials (such as API keys), and chat histories are saved solely within your browser's local sandbox via the <code>chrome.storage</code> API.
+      </p>
+
+      <h2>3. Data Collection and Usage</h2>
+      <p>We process the following data strictly to execute the core functions explicitly requested by the user:</p>
+      <ul>
+        <li><strong>API Credentials & Custom Endpoints:</strong> Your LLM API keys (e.g., OpenAI, Anthropic, DeepSeek, or custom compatible endpoints) are stored locally in your browser. They are used exclusively to authenticate outbound requests to the AI providers you configure.</li>
+        <li><strong>User-Selected Text & Page Content:</strong> When you invoke translation, article summarization, or side panel analysis, the highlighted text or article body is read from the active tab. This content is sent directly to your chosen AI service solely for generating the requested response.</li>
+        <li><strong>Bookmarks:</strong> When utilizing the Workspace bookmark management feature, bookmarks are queried and displayed locally inside the extension. No bookmark data is sent to external servers.</li>
+      </ul>
+
+      <h2>4. Third-Party AI Services</h2>
+      <p>
+        When you submit an AI prompt, translate text, or summarize a web page, the necessary text payload is transmitted directly from your client browser to the third-party AI provider endpoint specified in your settings. Please refer to your designated AI provider's privacy policy regarding their data retention and processing standards.
+      </p>
+
+      <h2>5. Chrome Web Store Limited Use Compliance</h2>
+      <p>We strictly comply with the <a href="https://developer.chrome.com/docs/webstore/program_policies/" target="_blank" rel="noopener">Chrome Web Store User Data Policy</a>, including the Limited Use requirements:</p>
+      <ul>
+        <li>We <strong>do not sell</strong> user data to third parties.</li>
+        <li>We <strong>do not use or transfer</strong> user data for targeted advertising or user tracking across sites.</li>
+        <li>We <strong>do not use</strong> user data to determine creditworthiness or for lending purposes.</li>
+      </ul>
+
+      <h2>6. Permissions Justification</h2>
+      <p>All requested Chrome permissions (e.g., <code>storage</code>, <code>tabs</code>, <code>sidePanel</code>, <code>contextMenus</code>, <code>&lt;all_urls&gt;</code>) are strictly utilized to enable in-page float actions, background synchronization, and native assistant UI as documented in our store declaration.</p>
+
+      <h2>7. Contact and Inquiries</h2>
+      <p>
+        If you have questions, feedback, or requests regarding this Privacy Policy, please open an issue on our official repository or contact the developer via our support channels:
+      </p>
+      <ul>
+        <li><strong>Project Repository:</strong> <a href="https://github.com/csvkse/AIToolBrowserExtension" target="_blank" rel="noopener">https://github.com/csvkse/AIToolBrowserExtension</a></li>
+      </ul>
+    </section>
+
+    <hr style="border: none; border-top: 1px dashed var(--border); margin: 40px 0;">
+
+    <!-- CHINESE SECTION -->
+    <section id="zh">
+      <h2>中文隐私权政策概要</h2>
+      <p>
+        <strong>AI 智能浏览器助手 (AI Browser Assistant)</strong> 极其重视您的个人隐私与数据安全：
+      </p>
+      <ul>
+        <li><strong>本地优先与去中心化：</strong>本插件不设立任何集中式后台服务器收集、分析或追踪您的网页浏览历史、搜索记录或个人隐私数据。</li>
+        <li><strong>配置与密钥存储：</strong>您配置的各大模型 API Key、端点地址与对话记录仅保存于您本地浏览器的沙箱（<code>chrome.storage</code>）中。</li>
+        <li><strong>数据传输范围：</strong>仅在您主动发起划词翻译、正文摘要或 AI 问答时，所选文本才会直连发送至您指定的大模型服务商。</li>
+        <li><strong>承诺绝不出售数据：</strong>严格遵守 Chrome Web Store 用户数据政策，严禁将数据用于个性化广告、信用画像或向任何第三方贩售。</li>
+      </ul>
+    </section>
+
+    <footer>
+      &copy; 2026 AI Browser Assistant. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
